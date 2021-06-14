@@ -79,9 +79,9 @@ namespace ACAutomationTesting
             homePage.ProfilePage.Click();
             var inputData = new NewInfoBo
             {
-                OldPass = "12345678",
-                NewPass = "12345678", //se modifica pentru test daca se doreste
-                ConfirmPass = "12345678",
+                OldPass = "test1234",
+                NewPass = "test1234", //se modifica pentru test daca se doreste
+                ConfirmPass = "test1234",
             };
             updatePage.ChangePass(inputData);
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, updatePage.ParolaSchimbata);
@@ -101,7 +101,7 @@ namespace ACAutomationTesting
             homePage.ProfilePage.Click();
             var inputData = new NewInfoBo
             {
-                OldPass = "test1234",
+                OldPass = "test123",
                 NewPass = "12345678",  //se modifica pentru test daca se doreste
                 ConfirmPass = "12345678"
             };

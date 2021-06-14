@@ -40,6 +40,8 @@ namespace ACAutomationTesting.PageObjects.UpdateInfoPage
         private By SchimbaParola = By.CssSelector("form[name='securityFrm'] > button");
         public IWebElement BtnSchimbaParola => driver.FindElement(SchimbaParola);
 
+        /*public By DataNasterii = By.CssSelector("input[name='']")*/
+
 
         public By ParolaSchimbata = By.CssSelector("md-dialog[role='alertdialog'] md-dialog-content div> p");
         public IWebElement AlertParolaSchimbata => driver.FindElement(ParolaSchimbata);
