@@ -44,8 +44,8 @@ namespace ACAutomationTesting
         [TestMethod]
         public void Should_login_successfully()
         {
-            const string email = "cosminccc28@gmail.com";
-            const string password = "134679852456";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
 
             HomePage homePage = loginPage.LoginUser(email, password);
             
@@ -59,8 +59,8 @@ namespace ACAutomationTesting
         [TestMethod]
         public void Should_fail_login_with_wrong_password()
         {
-            const string email = "cosminccc28@gmail.com";
-            const string password = "123456789";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
 
             loginPage.LoginUser(email, password);
 
@@ -73,7 +73,7 @@ namespace ACAutomationTesting
         [TestMethod]
         public void Should_fail_login_with_wrong_email()
         {
-            const string email = "cosminccc30@gmail.com";
+            const string email = "test@yahoo.com";
 
             loginPage.EnterEmail(email);
 

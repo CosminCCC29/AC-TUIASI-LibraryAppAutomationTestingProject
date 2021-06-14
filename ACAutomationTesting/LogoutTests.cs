@@ -44,8 +44,8 @@ namespace ACAutomationTesting
         [ExpectedException(typeof(OpenQA.Selenium.NoSuchElementException))]
         public void Should_logout_succesfully()
         {
-            const string email = "cosminccc28@gmail.com";
-            const string password = "134679852456";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
 
             loginPage.LoginUser(email, password);
 

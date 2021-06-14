@@ -46,8 +46,8 @@ namespace ACAutomationTesting
         {
             driver.FindElement(By.CssSelector("a.btn-register-modal")).Click();
 
-            const string email = "cosminccc28@gmail.com";
-            const string password = "134679852456";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
             loginPage.LoginUser(email, password);
 
             driver.Navigate().GoToUrl("https://www.mammamia.ro/ro/139/p");
@@ -74,8 +74,8 @@ namespace ACAutomationTesting
         {
             driver.FindElement(By.CssSelector("a.btn-register-modal")).Click();
 
-            const string email = "cosminccc28@gmail.com";
-            const string password = "134679852456";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
             loginPage.LoginUser(email, password);
 
             driver.Navigate().GoToUrl("https://www.mammamia.ro/ro/1432/p");

@@ -46,8 +46,8 @@ namespace ACAutomationTesting
         [TestMethod]
         public void Should_update_info_successfully()
         {
-            const string email = "gandrei5@yahoo.com";
-            const string password = "12345678";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
 
             HomePage homePage = loginPage.LoginUser(email, password);
 
@@ -68,8 +68,8 @@ namespace ACAutomationTesting
         [TestMethod]
         public void Should_change_password_successfully()
         {
-            const string email = "gandrei5@yahoo.com";
-            const string password = "12345678";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
 
             HomePage homePage = loginPage.LoginUser(email, password);
 
@@ -90,8 +90,8 @@ namespace ACAutomationTesting
         [TestMethod]
         public void Should_fail_changing_password()
         {
-            const string email = "gandrei5@yahoo.com";
-            const string password = "12345678";
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
 
             HomePage homePage = loginPage.LoginUser(email, password);
 
@@ -101,13 +101,36 @@ namespace ACAutomationTesting
             homePage.ProfilePage.Click();
             var inputData = new NewInfoBo
             {
-                OldPass = "1234567",
+                OldPass = "test1234",
                 NewPass = "12345678",  //se modifica pentru test daca se doreste
                 ConfirmPass = "12345678"
             };
             updatePage.ChangePass(inputData);
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, updatePage.ParolaSchimbata);
             Assert.AreEqual("Parola curenta nu este valida.", updatePage.AlertParolaSchimbata.Text);
+        }
+
+        /// <summary>
+        /// Author: Melinte Alexandru-Gicu
+        /// </summary>
+        [TestMethod]
+        public void Should_update_date_of_birth_successfully()
+        {
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
+
+            HomePage homePage = loginPage.LoginUser(email, password);
+
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, homePage.siteLogoIdSelector);
+            homePage.LoggedUserDOMElement.Click();
+            homePage.ProfilePage.Click();
+            var inputData = new NewInfoBo
+            {
+                DataNasterii = "1999-10-21"
+            };
+            updatePage.SaveInfo(inputData);
+            Thread.Sleep(1000);
+            Assert.AreEqual("true", updatePage.BtnSalveazaDatele.GetAttribute("disabled"));
         }
     }
 }
