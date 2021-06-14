@@ -32,5 +32,15 @@ namespace ACAutomationTesting.PageObjects
 
             return new HomePage(driver);
         }
+
+        public void EnterEmail(string email)
+        {
+            WaitHelpers.WaitForElementToBeVisible(driver, continueButtonCssSelector);
+            EmailTextBox.SendKeys(email);
+            ContinueButtonTextBox.Click();
+
+            WaitHelpers.WaitForElementToBeVisible(driver, continueButtonCssSelector);
+
+        }
     }
 }

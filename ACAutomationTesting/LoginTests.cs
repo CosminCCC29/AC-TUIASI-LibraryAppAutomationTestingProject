@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
+
 namespace ACAutomationTesting
 {
     [TestClass]
@@ -10,6 +11,9 @@ namespace ACAutomationTesting
     {
         private IWebDriver driver;
         private LoginPage loginPage;
+
+
+        private RegisterPage registerPage;
 
         [TestInitialize]
         public void TestSetup()
@@ -24,6 +28,7 @@ namespace ACAutomationTesting
             driver.FindElement(By.CssSelector("a.btn-register-modal")).Click();
 
             loginPage = new LoginPage(driver);
+            registerPage = new RegisterPage(driver);
         }
 
         [TestCleanup]
@@ -32,6 +37,10 @@ namespace ACAutomationTesting
             driver.Quit();
         }
 
+
+        /// <summary>
+        /// Author: Cosmin-Constantin Cojocaru
+        /// </summary>
         [TestMethod]
         public void Should_login_successfully()
         {
@@ -42,18 +51,33 @@ namespace ACAutomationTesting
             
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, homePage.siteLogoIdSelector);
             Assert.IsTrue(homePage.LoggedUserDOMElement.Displayed);
-        }
+        }  
 
+        /// <summary>
+        /// Author: Cosmin-Constantin Cojocaru
+        /// </summary>
         [TestMethod]
         public void Should_fail_login_with_wrong_password()
         {
             const string email = "cosminccc28@gmail.com";
             const string password = "123456789";
 
-            LoginPage loginPage = new LoginPage(driver);
             loginPage.LoginUser(email, password);
 
             Assert.IsTrue(loginPage.PasswordTextBox.Displayed);
+        }
+
+        /// <summary>
+        /// Author: Radu-Andrei Budeanu
+        /// </summary>
+        [TestMethod]
+        public void Should_fail_login_with_wrong_email()
+        {
+            const string email = "cosminccc30@gmail.com";
+
+            loginPage.EnterEmail(email);
+
+            Assert.IsTrue(registerPage.NewUserLabel.Displayed);
         }
     }
 }

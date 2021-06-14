@@ -19,11 +19,30 @@ namespace ACAutomationTesting.PageObjects
 
         public ReadOnlyCollection<IWebElement> products => driver.FindElements(productsCssSelector);
 
-        public bool CheckProductInCart(string name, uint grams, uint quantity, float totalToPay)
+        public bool CheckPizzaInCart(string name, uint grams, uint quantity, float totalToPay)
         {
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, shoppingCartCssSelector);
 
             foreach (IWebElement element in products) {
+
+                string productName = element.FindElement(productNameCssSelector).Text;
+                float productPrice = float.Parse(element.FindElement(productPriceCssSelector).Text.Replace(" LEI", ""));
+
+                float totalPrice = productPrice * quantity;
+
+                if (productName.Equals($"{name} {grams}g") && totalPrice == totalToPay)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public bool CheckSpiceryInCart(string name, uint grams, uint quantity, float totalToPay)
+        {
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, shoppingCartCssSelector);
+
+            foreach (IWebElement element in products)
+            {
 
                 string productName = element.FindElement(productNameCssSelector).Text;
                 float productPrice = float.Parse(element.FindElement(productPriceCssSelector).Text.Replace(" LEI", ""));
