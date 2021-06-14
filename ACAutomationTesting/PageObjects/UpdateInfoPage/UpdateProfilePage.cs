@@ -34,6 +34,8 @@ namespace ACAutomationTesting.PageObjects.UpdateInfoPage
         private By ConfirmPass = By.CssSelector("input[name='confirm_password']");
         public IWebElement TxtConfirmPass => driver.FindElement(ConfirmPass);
 
+        public By SalveazaDateleButonInactiv = By.CssSelector("form[name='myDataFrm'] > button[disabled='disabled']");
+
         private By SalveazaDatele = By.CssSelector("form[name='myDataFrm'] > button");
         public IWebElement BtnSalveazaDatele => driver.FindElement(SalveazaDatele);
 

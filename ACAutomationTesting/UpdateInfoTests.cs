@@ -54,13 +54,15 @@ namespace ACAutomationTesting
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, homePage.siteLogoIdSelector);
             homePage.LoggedUserDOMElement.Click();
             homePage.ProfilePage.Click();
+            
             var inputData = new NewInfoBo
             {
                 Nume = "Overriden First Name",
                 Telefon = "0792929292"
             };
+            
             updatePage.SaveInfo(inputData);
-            Thread.Sleep(1000);
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, updatePage.SalveazaDateleButonInactiv);
         
             Assert.AreEqual("true",updatePage.BtnSalveazaDatele.GetAttribute("disabled"));
         }
