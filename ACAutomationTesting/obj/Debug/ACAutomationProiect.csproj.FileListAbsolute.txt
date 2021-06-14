@@ -35,3 +35,22 @@ D:\Faculty\Testing\ACAutomationTesting\obj\Debug\ACAutomationProiect.csproj.Core
 D:\Faculty\Testing\ACAutomationTesting\obj\Debug\ACAutomationProiect.csproj.CopyComplete
 D:\Faculty\Testing\ACAutomationTesting\obj\Debug\ACAutomationTesting.dll
 D:\Faculty\Testing\ACAutomationTesting\obj\Debug\ACAutomationTesting.pdb
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\ACAutomationTesting.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\ACAutomationTesting.pdb
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\SeleniumExtras.WaitHelpers.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\WebDriver.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\WebDriver.Support.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\WebDriver.xml
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\bin\Debug\WebDriver.Support.xml
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\obj\Debug\ACAutomationProiect.csprojAssemblyReference.cache
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\obj\Debug\ACAutomationProiect.csproj.CoreCompileInputs.cache
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\obj\Debug\ACAutomationProiect.csproj.CopyComplete
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\obj\Debug\ACAutomationTesting.dll
+D:\Andrei\Facultate\AN3SEM2\Centric\New folder\AutomationTestingProject\ACAutomationTesting\obj\Debug\ACAutomationTesting.pdb

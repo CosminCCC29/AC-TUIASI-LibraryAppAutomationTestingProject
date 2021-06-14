@@ -14,13 +14,13 @@ namespace ACAutomationTesting.PageObjects
         private By loggedUserCssSelector = By.CssSelector("a[href='https://www.mammamia.ro/ro/profilul-meu']");
         public By siteLogoIdSelector = By.Id("logo-header");
         private By userProfileCssSelector = By.CssSelector(".dropdown-toggle");
-
+        private By userProfilePage = By.CssSelector("li>a[href = 'https://www.mammamia.ro/ro/profilul-meu']");
 
         public IWebElement LoggedUserDOMElement => driver.FindElement(loggedUserCssSelector);
         public IWebElement LogoById => driver.FindElement(siteLogoIdSelector);
         public IWebElement Logo => driver.FindElement(siteLogoIdSelector);
 
         public IWebElement ProfileButton => driver.FindElement(userProfileCssSelector);
-
+        public IWebElement ProfilePage => driver.FindElement(userProfilePage);
     }
 }
