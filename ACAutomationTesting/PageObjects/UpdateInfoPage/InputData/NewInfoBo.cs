@@ -12,7 +12,7 @@ namespace ACAutomationTesting.PageObjects.UpdateInfoPage.InputData
 {
     public class NewInfoBo
     {
-        public string Nume { get; set; } = "test";
+        public string Nume { get; set; } = "test test";
         public string Email { get; set; } = "test@yahoo.com";
         public string Telefon { get; set; } = "0752974576";
         public string OldPass { get; set; } = "test1234";
