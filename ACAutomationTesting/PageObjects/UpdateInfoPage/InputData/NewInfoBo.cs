@@ -21,5 +21,7 @@ namespace ACAutomationTesting.PageObjects.UpdateInfoPage.InputData
 
         //Melinte Alexandru-Gicu
         public string DataNasterii { get; set; } = "1998-10-21";
+        public string Adresa { get; set; } = "Strada Cerna";
+        public string Numar { get; set; } = "6";
     }
 }

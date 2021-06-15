@@ -41,5 +41,12 @@ namespace ACAutomationTesting.PageObjects
 
             grams = uint.Parse(driver.FindElement(pizzaGramsCssSelector).Text.Replace("g", ""));
         }
+
+        public string GetPizzaName()
+        {
+            string pizzaName = driver.FindElement(pizzaNameCssSelector).Text;
+        
+            return pizzaName;
+        }
     }
 }

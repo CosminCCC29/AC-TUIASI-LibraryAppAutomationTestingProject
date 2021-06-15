@@ -20,6 +20,9 @@ namespace ACAutomationTesting
         private IWebDriver driver;
         private LoginPage loginPage;
         private UpdateProfilePage updatePage;
+        private AddAddressPage addressPage;
+
+        private static bool flag = false;
 
         [TestInitialize]
         public void TestSetup()
@@ -35,11 +38,19 @@ namespace ACAutomationTesting
 
             loginPage = new LoginPage(driver);
             updatePage = new UpdateProfilePage(driver);
+            addressPage = new AddAddressPage(driver);
         }
 
         [TestCleanup]
         public void TestCleanup()
         {
+            if(flag == true)
+            {
+                driver.FindElement(By.CssSelector("#tab-content-1 > div > div > div.personal-data__address > div > div > md-list > md-list-item:nth-child(1)")).Click();
+                Thread.Sleep(1000);
+                driver.FindElement(By.XPath("//*[contains(@id, 'dialogContent_')]/form/md-container/button[2]")).Click();
+            }
+            flag = false;
             driver.Quit();
         }
 
@@ -130,9 +141,39 @@ namespace ACAutomationTesting
             {
                 DataNasterii = "1999-10-21"
             };
+            
             updatePage.SaveInfo(inputData);
             Thread.Sleep(1000);
             Assert.AreEqual("true", updatePage.BtnSalveazaDatele.GetAttribute("disabled"));
+        }
+
+        [TestMethod]
+        public void Should_add_address_successfully()
+        {
+            flag = true;
+            const string email = "test@yahoo.com";
+            const string password = "test1234";
+
+            HomePage homePage = loginPage.LoginUser(email, password);
+
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, homePage.siteLogoIdSelector);
+            homePage.LoggedUserDOMElement.Click();
+
+            homePage.ProfilePage.Click();
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, updatePage.AddAddressButton);
+            updatePage.BtnSchimbaAdresa.Click();
+
+            var inputData = new NewInfoBo
+            {
+                Adresa = "Strada Cerna",
+                Numar = "6"
+            };
+
+
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, addressPage.Adresa);
+            addressPage.AddAddress(inputData);
+            Thread.Sleep(1000);
+            Assert.IsTrue(driver.FindElement(By.CssSelector("#tab-content-1 > div > div > div.personal-data__address > div > div > md-list > md-list-item:nth-child(1)")).Displayed);
         }
     }
 }

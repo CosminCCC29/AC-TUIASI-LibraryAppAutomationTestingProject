@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// Author:Dima Raul Andrei
+/// Authors: Dima Raul Andrei
 /// </summary>
 namespace ACAutomationTesting.PageObjects.UpdateInfoPage
 {
@@ -34,26 +34,34 @@ namespace ACAutomationTesting.PageObjects.UpdateInfoPage
         private By ConfirmPass = By.CssSelector("input[name='confirm_password']");
         public IWebElement TxtConfirmPass => driver.FindElement(ConfirmPass);
 
-        public By SalveazaDateleButonInactiv = By.CssSelector("form[name='myDataFrm'] > button[disabled='disabled']");
-
         private By SalveazaDatele = By.CssSelector("form[name='myDataFrm'] > button");
         public IWebElement BtnSalveazaDatele => driver.FindElement(SalveazaDatele);
 
         private By SchimbaParola = By.CssSelector("form[name='securityFrm'] > button");
         public IWebElement BtnSchimbaParola => driver.FindElement(SchimbaParola);
 
-        /*public By DataNasterii = By.CssSelector("input[name='']")*/
-
-
         public By ParolaSchimbata = By.CssSelector("md-dialog[role='alertdialog'] md-dialog-content div> p");
         public IWebElement AlertParolaSchimbata => driver.FindElement(ParolaSchimbata);
+
+	public By SalveazaDateleButonInactiv = By.CssSelector("form[name='myDataFrm'] > button[disabled='disabled']");
+
+
+
+        // Melinte Alexandru-Gicu
+        public By DataNasterii = By.Id("input_7");
+        public IWebElement TxtDataNasterii => driver.FindElement(DataNasterii);
+
+        public By AddAddressButton = By.CssSelector("#tab-content-1 > div > div > div.personal-data__address > h3 > button > span");
+        public IWebElement BtnSchimbaAdresa => driver.FindElement(AddAddressButton);
 
         public void SaveInfo(NewInfoBo inputData)
         {
             TxtNume.Clear();
             TxtTelefon.Clear();
+            TxtDataNasterii.Clear();
             TxtNume.SendKeys(inputData.Nume);
             TxtTelefon.SendKeys(inputData.Telefon);
+            TxtDataNasterii.SendKeys(inputData.DataNasterii);
             BtnSalveazaDatele.Click();
         }
 

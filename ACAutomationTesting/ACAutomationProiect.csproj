@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogoutTests.cs" />
+    <Compile Include="PageObjects\AddAddressPage.cs" />
     <Compile Include="PageObjects\PizzaPage.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="PageObjects\UpdateInfoPage\InputData\NewInfoBo.cs" />
     <Compile Include="PageObjects\UpdateInfoPage\UpdateProfilePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchBarTests.cs" />
     <Compile Include="ShoppingCartTests.cs" />
     <Compile Include="UpdateInfoTests.cs" />
     <Compile Include="WaitStrategy\WaitHelpers.cs" />
