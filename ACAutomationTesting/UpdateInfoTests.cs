@@ -5,12 +5,8 @@ using ACAutomationTesting.PageObjects.UpdateInfoPage.InputData;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System.Threading;
 
 
-/// <summary>
-/// Author:Dima Raul Andrei
-/// </summary>
 namespace ACAutomationTesting
 {
     [TestClass]
@@ -53,6 +49,9 @@ namespace ACAutomationTesting
             driver.Quit();
         }
 
+        /// <summary>
+        /// Author:Dima Raul Andrei
+        /// </summary>
         [TestMethod]
         public void Should_update_info_successfully()
         {
@@ -77,6 +76,9 @@ namespace ACAutomationTesting
             Assert.AreEqual("true",updatePage.BtnSalveazaDatele.GetAttribute("disabled"));
         }
 
+        /// <summary>
+        /// Author:Dima Raul Andrei
+        /// </summary>
         [TestMethod]
         public void Should_change_password_successfully()
         {
@@ -100,6 +102,9 @@ namespace ACAutomationTesting
             Assert.AreEqual("Parola a fost schimbata cu success", updatePage.AlertParolaSchimbata.Text);
         }
 
+        /// <summary>
+        /// Author:Dima Raul Andrei
+        /// </summary>
         [TestMethod]
         public void Should_fail_changing_password()
         {
@@ -147,6 +152,9 @@ namespace ACAutomationTesting
             Assert.AreEqual("true", updatePage.BtnSalveazaDatele.GetAttribute("disabled"));
         }
 
+        /// <summary>
+        /// Author: Melinte Alexandru-Gicu
+        /// </summary>
         [TestMethod]
         public void Should_add_address_successfully()
         {

@@ -1,15 +1,8 @@
 ﻿using ACAutomationTesting.PageObjects;
-using ACAutomationTesting.PageObjects.UpdateInfoPage;
-using ACAutomationTesting.PageObjects.UpdateInfoPage.InputData;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System.Threading;
 
-/// <summary>
-/// Author: Melinte Alexandru-Gicu
-/// </summary>
 
 namespace ACAutomationTesting
 {
@@ -34,6 +27,10 @@ namespace ACAutomationTesting
             pizzaPage = new PizzaPage(driver);
         }
 
+
+        /// <summary>
+        /// Author: Melinte Alexandru-Gicu
+        /// </summary>
         [TestMethod]
         public void Should_search_an_existing_pizza()
         {
