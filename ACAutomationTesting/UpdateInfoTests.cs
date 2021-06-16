@@ -5,7 +5,6 @@ using ACAutomationTesting.PageObjects.UpdateInfoPage.InputData;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 using System.Threading;
 
 
@@ -47,7 +46,7 @@ namespace ACAutomationTesting
             if(flag == true)
             {
                 driver.FindElement(By.CssSelector("#tab-content-1 > div > div > div.personal-data__address > div > div > md-list > md-list-item:nth-child(1)")).Click();
-                Thread.Sleep(1000);
+                WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, By.XPath("//*[contains(@id, 'dialogContent_')]/form/md-container/button[2]"));
                 driver.FindElement(By.XPath("//*[contains(@id, 'dialogContent_')]/form/md-container/button[2]")).Click();
             }
             flag = false;
@@ -100,6 +99,7 @@ namespace ACAutomationTesting
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, updatePage.ParolaSchimbata);
             Assert.AreEqual("Parola a fost schimbata cu success", updatePage.AlertParolaSchimbata.Text);
         }
+
         [TestMethod]
         public void Should_fail_changing_password()
         {
@@ -143,7 +143,7 @@ namespace ACAutomationTesting
             };
             
             updatePage.SaveInfo(inputData);
-            Thread.Sleep(1000);
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, updatePage.SalveazaDateleButonInactiv);
             Assert.AreEqual("true", updatePage.BtnSalveazaDatele.GetAttribute("disabled"));
         }
 
@@ -172,7 +172,7 @@ namespace ACAutomationTesting
 
             WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, addressPage.Adresa);
             addressPage.AddAddress(inputData);
-            Thread.Sleep(1000);
+            WaitStrategy.WaitHelpers.WaitForElementToBeVisible(driver, By.CssSelector("#tab-content-1 > div > div > div.personal-data__address > div > div > md-list > md-list-item:nth-child(1)"));
             Assert.IsTrue(driver.FindElement(By.CssSelector("#tab-content-1 > div > div > div.personal-data__address > div > div > md-list > md-list-item:nth-child(1)")).Displayed);
         }
     }
