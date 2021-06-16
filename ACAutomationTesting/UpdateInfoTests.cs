@@ -165,7 +165,7 @@ namespace ACAutomationTesting
 
             var inputData = new NewInfoBo
             {
-                Adresa = "Strada Cerna",
+                Adresa = "strada cerna",
                 Numar = "6"
             };
 

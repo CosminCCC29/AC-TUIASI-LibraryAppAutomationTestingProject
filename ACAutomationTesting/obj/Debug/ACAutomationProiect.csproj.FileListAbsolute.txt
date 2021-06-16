@@ -73,3 +73,4 @@ C:\Users\alexm\Desktop\TestareCommitFinal\AutomationTestingProject\ACAutomationT
 C:\Users\alexm\Desktop\TestareCommitFinal\AutomationTestingProject\ACAutomationTesting\bin\Debug\WebDriver.xml
 C:\Users\alexm\Desktop\TestareCommitFinal\AutomationTestingProject\ACAutomationTesting\bin\Debug\WebDriver.Support.xml
 C:\Users\alexm\Desktop\TestareCommitFinal\AutomationTestingProject\ACAutomationTesting\obj\Debug\ACAutomationProiect.csproj.CopyComplete
+D:\Faculty\Testing\ACAutomationTesting\obj\Debug\ACAutomationProiect.csprojAssemblyReference.cache
